@@ -2,33 +2,33 @@
     {
         "pasta": "Financeiro",
         "palavras": [
-            "Fatura","Boleto","Pagamento","Cobrança","Mensalidade","Reembolso"
+            "fatura","boleto","pagamento","cobrança","mensalidade","reembolso"
         ]
     },
     {
         "pasta": "Sinistros",
         "palavras": [
-            "Sinistro","Júridico","Roubo","Acidente","Prêmio"
+            "sinistro","juridico","roubo","acidente","premio"
         ]
     },
     {
-        "pasta": "Cancelamento",
+        "pasta": "cancelamentos",
         "palavras": [
-            "Cancelamento","Rescisão","Desistência","Encerramento"
+            "cancelamento","rescisao","desistencia","encerramento"
         ]
     },
     {
-        "pasta": "Atendimento",
+        "pasta": "atendimento",
         "palavras": [
-            "Atendimento","Suporte","Ajuda","Dúvida","Informação"
+            "atendimento","suporte","ajuda","duvida","informação"
         ]
     },
     {
-        "pasta": "Cotações",
-        "palavras":["Cotação","Orçamento","Proposta","Apólice"]
+        "pasta": "Cotacoes",
+        "palavras":["cotacao","orçamento","proposta","apolice"]
     },
     {
         "pasta": "Categoria",
-        "palavras":["Nacional", "Internacional", "Outros"]
+        "palavras":["nacional", "internacional", "outros"]
     }
 ]
