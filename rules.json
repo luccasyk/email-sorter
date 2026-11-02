@@ -2,19 +2,33 @@
     {
         "pasta": "Financeiro",
         "palavras": [
-            "Fatura",
-            "Boleto",
-            "Pagamento"
+            "Fatura","Boleto","Pagamento","Cobrança","Mensalidade","Reembolso"
         ]
     },
     {
-        "pasta": "Estudante",
+        "pasta": "Sinistros",
         "palavras": [
-            "Provas",
-            "Entrega",
-            "Projeto",
-            "Notas",
-            "Data"
+            "Sinistro","Júridico","Roubo","Acidente","Prêmio"
         ]
+    },
+    {
+        "pasta": "Cancelamento",
+        "palavras": [
+            "Cancelamento","Rescisão","Desistência","Encerramento"
+        ]
+    },
+    {
+        "pasta": "Atendimento",
+        "palavras": [
+            "Atendimento","Suporte","Ajuda","Dúvida","Informação"
+        ]
+    },
+    {
+        "pasta": "Cotações",
+        "palavras":["Cotação","Orçamento","Proposta","Apólice"]
+    },
+    {
+        "pasta": "Categoria",
+        "palavras":["Nacional", "Internacional", "Outros"]
     }
 ]
