@@ -1,0 +1,20 @@
+[
+    {
+        "pasta": "Financeiro",
+        "palavras": [
+            "Fatura",
+            "Boleto",
+            "Pagamento"
+        ]
+    },
+    {
+        "pasta": "Estudante",
+        "palavras": [
+            "Provas",
+            "Entrega",
+            "Projeto",
+            "Notas",
+            "Data"
+        ]
+    }
+]
