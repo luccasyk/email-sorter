@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import unicodedata
+
 from collections import Counter
 from datetime import datetime
 from email import message_from_bytes
@@ -15,4 +16,11 @@ DEFAULT_HOST = "imap.gmail.com"
 RULES_FILE = Path(__file__).parent / "rules.json"
 REPORT_ARCHIVE = Path(__file__).with_name("relatorio.csv")
 
+def normalizar_texto(texto):
+    sem_acento = unicodedata.normalize("NKFD, texto")
+    return "".join(
+        c for c in sem_acento
+        if not unicodedata.combining(c)
+    ).lower()
 
+#def carregar_regras(caminho=RULES_FILE):
