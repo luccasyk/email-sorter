@@ -29,3 +29,12 @@ def carregar_regras(caminho=RULES_FILE):
     for regra in regras:
         regra["palavras"] = [normalizar(p) for p in regra["palavras"]]
     return regras
+
+def classificar(assunto, remetente, regras):
+    alvo = normalizar(f"{assunto} {remetente}")
+    for regra in regras:
+        if any(p in alvo for p in regra[palavras]):
+            return regra["pasta"]
+        return None
+
+    
