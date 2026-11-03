@@ -23,4 +23,9 @@ def normalizar_texto(texto):
         if not unicodedata.combining(c)
     ).lower()
 
-#def carregar_regras(caminho=RULES_FILE):
+def carregar_regras(caminho=RULES_FILE):
+    with open(caminho, enconding="utf-8") as f:
+        regras = json.load
+    for regra in regras:
+        regra["palavras"] = [normalizar(p) for p in regra["palavras"]]
+    return regras
