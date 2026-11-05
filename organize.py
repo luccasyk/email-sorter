@@ -36,3 +36,10 @@ def classificar(assunto, remetente, regras):
             return regra["pasta"]
     return None
 
+def texto_do_cabecalho(valor):
+    if not valor:
+        return ""
+    valor = " ".join(str(valor).split())
+    try:
+        return str(make_header(decode_header(valor)))
+    e
