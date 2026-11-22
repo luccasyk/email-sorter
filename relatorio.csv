@@ -1,0 +1,9 @@
+data_hora,remetente,assunto,destino,acao
+2026-11-05 00:06:27,Google <no-reply@accounts.google.com>,Security alert,,mantido
+2026-11-05 00:06:27,Google <no-reply@accounts.google.com>,2-Step Verification turned on,,mantido
+2026-11-05 00:06:27,Google <no-reply@accounts.google.com>,Security alert,,mantido
+2026-11-05 00:06:27,Google <no-reply@accounts.google.com>,Your Google Account was recovered successfully,,mantido
+2026-11-05 00:06:27,EMAIL TESTE <testemailcollege26@gmail.com>,Sinistro de colisão,Sinistros,movido
+2026-11-05 00:06:27,EMAIL TESTE <testemailcollege26@gmail.com>,Cobrança em duplicidade,Financeiro,movido
+2026-11-05 00:06:27,EMAIL TESTE <testemailcollege26@gmail.com>,Pedido de reembolso,Financeiro,movido
+2026-11-05 00:06:27,EMAIL TESTE <testemailcollege26@gmail.com>,Segunda via do boleto,Financeiro,movido
