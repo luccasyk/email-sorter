@@ -105,3 +105,6 @@ Quando executado com --aplicar e havendo mensagens movidas, o arquivo relatorio.
 Comece sempre pelo modo de simulação para conferir se as regras fazem sentido.
 Faça os testes em uma conta de e-mail criada só para essa finalidade.
 O relatorio.csv contém remetentes e assuntos de e-mails reais: adicione-o ao .gitignore e não o publique no repositório.
+
+# .gitignore
+relatorio.csv
