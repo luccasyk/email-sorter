@@ -20,7 +20,36 @@ O programa possui dois modos de execução:
 |---|---|
 | `organize.py` | Código-fonte principal da aplicação. |
 | `rules.json` | Regras de classificação (categorias e palavras-chave). |
-| `relatorio.csv` | Gerado automaticamente após a execução com `--aplicar`, registrando as movimentações. |
+| `relatorio.csv` | Gerado automaticamente na execução com `--aplicar`, registrando as mensagens processadas. |
+
+### Formato do `rules.json`
+
+O arquivo é uma lista de regras. Cada regra tem:
+
+- `pasta`: nome da pasta de destino da mensagem.
+- `palavras`: lista de palavras-chave procuradas no assunto e no remetente.
+
+```json
+[
+    {
+        "pasta": "Financeiro",
+        "palavras": ["fatura", "boleto", "pagamento", "cobrança", "mensalidade", "reembolso"]
+    },
+    {
+        "pasta": "Cotacoes",
+        "palavras": ["cotacao", "orçamento", "proposta", "apolice"]
+    }
+]
+```
+
+Para criar uma nova categoria, basta adicionar um novo bloco com `pasta` e `palavras`. Não é preciso alterar o código.
+
+**Como as regras são aplicadas:**
+
+- A comparação ignora **maiúsculas e acentos** (`cotação` e `cotacao` são equivalentes).
+- A palavra-chave pode aparecer em qualquer parte do texto, inclusive dentro de outra palavra (`pagamento` também encontra `pagamentos`).
+- As regras são avaliadas **de cima para baixo** e vale a **primeira que corresponder**. Se uma mensagem combinar com mais de uma pasta, ela vai para a que estiver primeiro no arquivo.
+- Mensagens que não combinam com nenhuma regra permanecem na caixa de entrada.
 
 ## 3. Requisitos
 
@@ -82,7 +111,7 @@ Em Linux/macOS, use `python3` no lugar de `py`.
 
 | Opção | Descrição |
 |---|---|
-| `--limite N` | Define a quantidade máxima de mensagens processadas. |
+| `--limite N` | Define a quantidade máxima de mensagens recentes processadas (padrão: 50). |
 | `--nao-lidos` | Processa somente mensagens não lidas. |
 | `--regras ARQUIVO` | Usa outro arquivo JSON de regras. |
 | `--aplicar` | Move as mensagens (sem ela, roda apenas a simulação). |
@@ -91,7 +120,9 @@ Em Linux/macOS, use `python3` no lugar de `py`.
 
 Durante a execução, o programa mostra no terminal um resumo das classificações.
 
-Quando executado com `--aplicar` e havendo mensagens movidas, o arquivo `relatorio.csv` é criado ou atualizado com: **data, remetente, assunto, destino e ação**.
+Quando executado com `--aplicar` e havendo mensagens processadas, o arquivo `relatorio.csv` é criado ou atualizado (novas linhas são acrescentadas a cada execução) com: **data e hora da execução, remetente, assunto, destino e ação**.
+
+A coluna de ação indica o que aconteceu com cada mensagem: `movido`, `mantido` (nenhuma regra correspondeu) ou `erro`.
 
 ## 7. Boas práticas e privacidade
 
